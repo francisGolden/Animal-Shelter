@@ -13,18 +13,17 @@ public class Main {
 
         myShelter.addAnimal(new Bird("birdie", 2, false));
 
-        myShelter.listAnimals("all");
+        System.out.println(myShelter.retrieveAnimals("all"));
         System.out.println("------");
         System.out.println(myShelter.searchBySpecies("cat"));
 
-        myShelter.adoptAnimal("wolfie");
         myShelter.adoptAnimal("birdie");
 
         System.out.println("ALL: ");
-        myShelter.listAnimals("all");
+        System.out.println(myShelter.retrieveAnimals("all"));
 
         System.out.println("-------");
         System.out.println("AVAILABLE: ");
-        myShelter.listAnimals("available");
+        myShelter.retrieveAnimals("available");
     }
 }

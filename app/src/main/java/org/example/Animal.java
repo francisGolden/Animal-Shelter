@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.ToString;
 
 @Getter
-@ToString
 public abstract class Animal {
     private String name;
     private int age;
@@ -34,5 +33,10 @@ public abstract class Animal {
             return;
         }
         adopted = true;
+    }
+
+    @Override
+    public String toString(){
+        return name + ", " + species + ", " + age + ", " + " adopted? " + adopted;
     }
 }

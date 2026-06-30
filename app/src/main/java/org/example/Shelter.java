@@ -16,14 +16,16 @@ public class Shelter<T extends Animal>{
         animals.add(animal);
     }
 
-    public void listAnimals(String config){
+    public ArrayList<T> retrieveAnimals(String config){
+        ArrayList<T> newList = new ArrayList<>();
         for (T animal: animals) {
             if (config.equals("available")) {
-                if (!animal.isAdopted()) System.out.println(animal);
+                if (!animal.isAdopted()) newList.add(animal);
             } else {
-                System.out.println(animal);
+                newList.add(animal);
             }
         }
+        return newList;
     }
 
     public ArrayList<T> searchBySpecies(String species){
