@@ -28,7 +28,7 @@ public class Shelter<T extends Animal>{
         return newList;
     }
 
-    public ArrayList<T> searchBySpecies(String species){
+    public ArrayList<T> filterBySpecies(String species){
         ArrayList<T> newList = new ArrayList<>();
         for (T animal: animals){
             if (animal.getSpecies().equals(species)){

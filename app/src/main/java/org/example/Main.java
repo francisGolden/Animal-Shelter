@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println(myShelter.retrieveAnimals("all"));
         System.out.println("------");
-        System.out.println(myShelter.searchBySpecies("cat"));
+        System.out.println(myShelter.filterBySpecies("cat"));
 
         myShelter.adoptAnimal("birdie");
 
