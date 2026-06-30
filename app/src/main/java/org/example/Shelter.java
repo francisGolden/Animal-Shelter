@@ -3,12 +3,13 @@ package org.example;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 public class Shelter<T extends Animal>{
-    private ArrayList<T> animals;
+    private List<T> animals;
 
-    public Shelter(ArrayList<T> animals){
+    public Shelter(List<T> animals){
         this.animals = animals;
     }
 
@@ -16,8 +17,8 @@ public class Shelter<T extends Animal>{
         animals.add(animal);
     }
 
-    public ArrayList<T> retrieveAnimals(String config){
-        ArrayList<T> newList = new ArrayList<>();
+    public List<T> retrieveAnimals(String config){
+        List<T> newList = new ArrayList<>();
         for (T animal: animals) {
             if (config.equals("available")) {
                 if (!animal.isAdopted()) newList.add(animal);
@@ -28,8 +29,8 @@ public class Shelter<T extends Animal>{
         return newList;
     }
 
-    public ArrayList<T> filterBySpecies(String species){
-        ArrayList<T> newList = new ArrayList<>();
+    public List<T> filterBySpecies(String species){
+        List<T> newList = new ArrayList<>();
         for (T animal: animals){
             if (animal.getSpecies().equals(species)){
                 newList.add(animal);

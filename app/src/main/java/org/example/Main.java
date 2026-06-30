@@ -24,6 +24,6 @@ public class Main {
 
         System.out.println("-------");
         System.out.println("AVAILABLE: ");
-        myShelter.retrieveAnimals("available");
+        System.out.println(myShelter.retrieveAnimals("available"));
     }
 }
