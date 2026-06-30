@@ -26,8 +26,8 @@ public class Shelter<T extends Animal>{
         }
     }
 
-    public ArrayList<Animal> searchBySpecies(String species){
-        ArrayList<Animal> newList = new ArrayList<>();
+    public ArrayList<T> searchBySpecies(String species){
+        ArrayList<T> newList = new ArrayList<>();
         for (T animal: animals){
             if (animal.getSpecies().equals(species)){
                 newList.add(animal);
@@ -40,6 +40,7 @@ public class Shelter<T extends Animal>{
         for (T animal: animals){
             if (animal.getName().equals(name)){
                 animal.adopt();
+                break;
             }
         }
     }
