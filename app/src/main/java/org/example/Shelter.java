@@ -6,7 +6,11 @@ import java.util.ArrayList;
 
 @Getter
 public class Shelter<T extends Animal>{
-    private ArrayList<T> animals = new ArrayList<>();
+    private ArrayList<T> animals;
+
+    public Shelter(ArrayList<T> animals){
+        this.animals = animals;
+    }
 
     public void addAnimal(T animal){
         animals.add(animal);

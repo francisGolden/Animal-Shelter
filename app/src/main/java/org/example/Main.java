@@ -1,8 +1,10 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Shelter<Animal> myShelter = new Shelter<>();
+        Shelter<Animal> myShelter = new Shelter<>(new ArrayList<>());
         myShelter.addAnimal(new Dog("jack", 3, false));
 
         myShelter.addAnimal(new Cat("kitty", 5, false));
